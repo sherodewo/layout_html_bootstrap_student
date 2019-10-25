@@ -1,0 +1,172 @@
+.column1 {
+    position: relative;
+}
+
+.column1 img {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.desc h1 {
+    color: black;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 20px;
+}
+
+.desc a {
+    color: #ddd;
+}
+
+.column2 {
+    padding: 40px;
+}
+
+.column2 p {
+    margin: 20px 0;
+}
+
+.column2 ul {
+    margin-left: 15px;
+}
+
+.column2 ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+
+/* Animation */
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-filter: contrast(400%) grayscale(0%);
+    }
+    100% {
+        -webkit-filter: contrast(100%) grayscale(100%);
+    }
+}
+
+@-webkit-keyframes mover {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.column1 {
+    -webkit-animation: pulse 3s alternate infinite
+    /*mover 5s alternate infinite*/
+    ;
+}
+
+.column1:hover {
+    -webkit-filter: contrast(300%) hue-rotate(80deg) grayscale(100%)/*
+    
+    blur(2px) */
+    ;
+}
+
+p#twd_opa_controls {
+    text-align: center;
+}
+
+#twd_opa_controls span {
+    padding-right: 2em;
+    cursor: pointer;
+}
+
+#twd_opa {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: relative;
+    height: 429px;
+    width: 600px;
+    margin: 0 auto 10px;
+}
+
+#twd_opa img {
+    position: absolute;
+    left: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+#twd_opa img.opaque {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+
+/* USUAL STUFF */
+
+body {
+    margin: auto;
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    text-align: left;
+    margin: auto;
+}
+
+
+/* THE DIV */
+
+.simple-ss {
+    width: 800px;
+    height: 250px;
+    background-color: red;
+    margin: auto;
+    background-image: url("https://imgur.com/download/OtK7XDW");
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* ANIMATING STUFF */
+    animation-name: slide;
+    animation-duration: 13s;
+    animation-direction: normal;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+
+/* NOTE CODEPEN AUTOGENERATING -PREFIXES */
+
+@keyframes slide {
+    0% {
+        background-position: 0 0;
+    }
+    16.66% {
+        background-position: 0 0;
+    }
+    33.32% {
+        background-position: -800px 0;
+    }
+    49.98% {
+        background-position: -800px 0;
+    }
+    66.64% {
+        background-position: -1600px 0;
+    }
+    83.30% {
+        background-position: -1600px 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
